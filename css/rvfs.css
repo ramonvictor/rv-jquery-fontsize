@@ -1,0 +1,52 @@
+/*
+ * Font size style declarations for each variation.
+ *
+ * Observation: Note that the amount of classes here
+ * rely on how many variations you set on $.rvFontsize() call.
+ * 
+ * This classes are required to make rv font size jquery plugin works.
+ */
+
+.rvfs-1 p, .rvfs-1 li{ font-size: 70%}
+.rvfs-2 p, .rvfs-2 li{ font-size: 80%}
+.rvfs-3 p, .rvfs-3 li{ font-size: 90%}
+.rvfs-4 p, .rvfs-4 li{ font-size: 100%}
+.rvfs-5 p, .rvfs-5 li{ font-size: 110%}
+.rvfs-6 p, .rvfs-6 li{ font-size: 120%}
+.rvfs-7 p, .rvfs-7 li{ font-size: 130%}
+
+/* 
+ * 
+ * Basic style for html controllers 
+ * appended by rv fontsize jquery plugin.
+ *
+ * The following code is just a point where
+ * you can start your own font size controllers style.
+ * Remove, update or add new lines. Here you should
+ * make the style fit the UI of your application.
+ * 
+ */
+
+.fontsize-controllers {
+	height: 20px;
+	margin-bottom: 15px
+}
+
+.fontsize-controllers ul { float: right; }
+.fontsize-controllers ul li { float: left; margin-right: 3px }
+
+.fontsize-controllers a {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	display: inline-block; 
+	font-size: 12px; 
+	line-height: 20px; 
+	background: #ccc;
+	color: #4F4F4F
+}
+
+.fontsize-controllers li .disable {
+	color: #AFAFAF;
+	background-color: #DFDFDF
+}

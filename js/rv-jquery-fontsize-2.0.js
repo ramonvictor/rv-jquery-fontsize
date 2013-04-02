@@ -16,7 +16,7 @@
         targetSection: 'body',
         setCookie: false,
         variations: 7,
-        controlers: {
+        controllers: {
             append: false,
             appendTo: 'body',
             showResetButton: false,
@@ -93,58 +93,67 @@
             _self.$resetButton = $(".rvfs-reset");
             if( _self.$resetButton.length > 0){
                 _self.$resetButton.on('click', function(){
-                    // !create reset click handler
+
+                    var n = parseInt( _self.getCurrentVariation() );
+                    _self.$target.removeClass('rvfs-' + n);
+
+                    _self.$target.attr('data-rvfs', _self.defaultFontsize);
+                    _self.storeCurrentSize();
+                    _self.fontsizeChanged();
                 });
             }
 
         },
 
         defineElements: function() {
-            this.$target = $( this.options.targetSection );
+            var _self = this;
+            _self.$target = $( _self.options.targetSection );
           
-            if( this.options.controlers.append !== false ){
-                var resetButton = this.options.controlers.showResetButton ? '<li><a href="javascript:;" class="rvfs-reset" title="Tamanho padrão">A</a></li>' : '';
-                var template = this.options.controlers.template,
-                    controlersHtml = '';
-                this.$appendTo = $( this.options.controlers.appendTo );
+            if( _self.options.controllers.append !== false ){
+                var resetButton = _self.options.controllers.showResetButton ? '<li><a href="javascript:;" class="rvfs-reset" title="Tamanho padrão">A</a></li>' : '';
+                var template = _self.options.controllers.template,
+                    controllersHtml = '';
+                _self.$appendTo = $( _self.options.controllers.appendTo );
                 
                 if( $.trim(template).length > 0 ){
-                     controlersHtml = template;
+                     controllersHtml = template;
                 } else {
-                    controlersHtml = '<ul>' +
+                    controllersHtml = '<ul>' +
                                             '<li><a href="javascript:;" class="rvfs-decrease" title="Decrease font size">A-</a></li>' +
                                             resetButton +
                                             '<li><a href="javascript:;" class="rvfs-increase" title="Increase font size">A+</a></li>' +
                                       '</ul>';
                 }
 
-                this.$appendTo.html( controlersHtml );
+                _self.$appendTo.html( controllersHtml );
 
-                this.bindControlerHandlers();
+                _self.bindControlerHandlers();
             }
         },
         
         getDefaultFontSize: function () {
-            var defaultFontsize = 0,
-                v = this.options.variations;
+            var _self = this,
+                v = _self.options.variations;
+            _self.defaultFontsize = 0;
 
             if(v % 2 == 0){
-                defaultFontsize = (v/2) + 1;
+                _self.defaultFontsize = (v/2) + 1;
             } else {
-                defaultFontsize = parseInt((v/2) + 1);
+                _self.defaultFontsize = parseInt((v/2) + 1);
             }
 
-            this.setDefaultFontSize( defaultFontsize );
+            _self.setDefaultFontSize( _self.defaultFontsize );
         },
 
         setDefaultFontSize: function( dfs ){
-            if( this.options.setCookie && ($.cookie("rvFontsize") !== null) ){
-                this.$target.attr("data-rvfs", $.cookie("rvFontsize") );
+            var _self = this;
+            if( _self.options.setCookie && ($.cookie("rvFontsize") !== null) ){
+                _self.$target.attr("data-rvfs", $.cookie("rvFontsize") );
             } else {
-                this.$target.attr("data-rvfs", dfs );
+                _self.$target.attr("data-rvfs", dfs );
             }
 
-            this.fontsizeChanged();
+            _self.fontsizeChanged();
         },
 
         storeCurrentSize : function() {
@@ -156,28 +165,30 @@
         },
 
         fontsizeChanged : function(){
-            var currentFs = parseInt( this.$target.attr("data-rvfs") );
-            this.$target.addClass( "rvfs-" +  currentFs);
+            var _self = this;
+                currentFs = parseInt( _self.$target.attr("data-rvfs") );
+            _self.$target.addClass( "rvfs-" +  currentFs);
 
-            if(currentFs === this.options.variations){
-                this.$increaseButton.addClass('disable');
+            if(currentFs === _self.options.variations){
+                _self.$increaseButton.addClass('disable');
             } else {
-                this.$increaseButton.removeClass('disable');
+                _self.$increaseButton.removeClass('disable');
             }
 
             if(currentFs === 1){
-                this.$decreaseButton.addClass('disable');
+                _self.$decreaseButton.addClass('disable');
             } else {
-                this.$decreaseButton.removeClass('disable');
+                _self.$decreaseButton.removeClass('disable');
             }
         }
     };
 
     
     $.fn[rvFontsize] = function (options) {
-        return this.each(function () {
-            if (!$.data(this, "plugin_" + rvFontsize)) {
-                $.data(this, "plugin_" + rvFontsize, new Plugin(this, options));
+        var _self = this;
+        return _self.each(function () {
+            if (!$.data(_self, "plugin_" + rvFontsize)) {
+                $.data(_self, "plugin_" + rvFontsize, new Plugin(_self, options));
             }
         });
     };

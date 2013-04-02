@@ -20,49 +20,11 @@ p { line-height: 130%; margin-bottom: .7em }
 ul { margin-bottom: .7em }
 ul li { line-height: 15px }
 
-/* estilo do plugin font size 1.1 */
-
-.rvfs-1 p, .rvfs-1 li{ font-size: 70%}
-.rvfs-2 p, .rvfs-2 li{ font-size: 80%}
-.rvfs-3 p, .rvfs-3 li{ font-size: 90%}
-.rvfs-4 p, .rvfs-4 li{ font-size: 100%}
-.rvfs-5 p, .rvfs-5 li{ font-size: 110%}
-.rvfs-6 p, .rvfs-6 li{ font-size: 120%}
-.rvfs-7 p, .rvfs-7 li{ font-size: 130%}
-
-#font_size {
-	height: 20px;
-	margin-bottom: 15px
-}
-
-#font_size ul { float: right; }
-#font_size ul li { float: left; margin-right: 3px }
-
-#font_size a {
-	width: 20px;
-	height: 20px;
-	text-align: center;
-	display: inline-block; 
-	font-size: 12px; 
-	line-height: 20px; 
-	background: #ccc;
-	color: #4F4F4F
-}
-
-#font_size li .disable {
-	color: #AFAFAF;
-	background-color: #DFDFDF
-}
-
-/*fim da configura��o do plugin */
-
-
 /* @Header */
 #header { 
 	position: relative;
 	height: 100px;
 }
-
 
 .vcard { float: left; padding: 30px 0 0 20px}
 .vcard  h1 { font-size: 40px; font-style: italic}

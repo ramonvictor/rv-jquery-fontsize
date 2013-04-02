@@ -7,15 +7,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Font Size Plugin 2.0</title>
+    <title>RV Font Size Plugin 2.0</title>
 
     <!-- meta -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="RV Font Size Plugin 2.0">
+    <meta name="author" content="Ramon Victor | https://github.com/ramonvictor">
     <meta name="viewport" content="width=device-width">
 
-    <!-- main style -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Demo page layout style -->
+    <link rel="stylesheet" href="css/base.css">
+    
+    <!-- Required RV Font Size Stylesheet -->
+    <link rel="stylesheet" href="css/rvfs.css">
     
     <!-- modernizr -->
     <script src="js/modernizr-2.5.3.min.js"></script>
@@ -44,15 +47,15 @@
 <div id="all"> 
         <header id="header">
             <div class="vcard">
-                <h1 class="fn">Fonte Size Plugin 2.0 
-                    <!-- <a href="http://www.ramonvictor.com/demo/fontsize/fontsize1.1/font_size1.1.zip">[download]</a> -->
+                <h1 class="fn">Fonte Size Plugin 2.0 [alpha] 
+                    <a href="https://github.com/ramonvictor/rv-jquery-fontsize">[download]</a>
                 </h1>
             </div><!-- vcard -->
         </header><!-- header -->
         <div id="main-content" role="main">
             <div id="content" class="outro outro2">
              <!--<div id="font_size"><ul><li>tamanho da fonte:</li><li><a href="javascript:;" class="menos" title="Diminuir tamanho da letra">A-</a></li><li><a href="javascript:;" class="resetar" title="Tamanho padr&atilde;o">A</a></li><li><a href="javascript:;" class="mais" title="Aumentar tamanho da letra">A+</a></li></ul></div>-->  
-                <div id="font_size"></div>
+                <div id="rvfs-controllers" class="fontsize-controllers"></div>
                 <div class="post">
                 <p>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget feugiat sed, vehicula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ligula leo. Fusce accumsan interdum elit. In sagittis, metus nec feugiat mollis, nibh enim interdum sem, non convallis nisl lorem vel tortor. Duis ultricies sem venenatis magna lacinia vitae facilisis magna semper. Maecenas id dui varius purus dapibus volutpat ut eu ligula. Phasellus enim ligula, molestie sed varius ut, varius at ante. Sed non ligula at mauris dapibus imperdiet. Pellentesque eget massa felis, adipiscing lacinia justo. Suspendisse potenti. Pellentesque a metus lorem. Donec dapibus sapien nec erat tincidunt dictum. Vivamus venenatis condimentum placerat. Mauris placerat fermentum ligula eu blandit. Nulla arcu lacus, tincidunt sed blandit tristique, ornare a nisl. Cras in enim felis. Aenean sit amet auctor nulla.</p>
                 <ul>
@@ -71,8 +74,8 @@
             </div>
         </div><!-- main-content -->
         <footer id="footer">
-            <p><a href="http://www.ramonvictor.com/plugin-jquery-font-size-1-1">Post original aqui</a></p>
-            <p>Autor: <a href="http://www.ramonvictor.com/sobre">ramonvictor.com</a></p>
+            <p><a href="https://github.com/ramonvictor/rv-jquery-fontsize">Documentation</a></p>
+            <p>Author: <a href="https://github.com/ramonvictor">@ramonvictor</a></p>
         </footer><!-- footer -->
 </div><!-- all -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -85,10 +88,10 @@ $(document).ready(function() {
     $.rvFontsize({
         targetSection: '#content',
         setCookie: false,
-        controlers: {
+        controllers: {
             append: true,
-            appendTo: '#font_size',
-            showResetButton: false
+            appendTo: '#rvfs-controllers',
+            showResetButton: true
         }
     }); 
 });
