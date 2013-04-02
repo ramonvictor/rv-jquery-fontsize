@@ -1,0 +1,90 @@
+* { margin: 0; padding: 0; list-style: none}
+a { text-decoration: none; color: #99C6DF}
+
+
+html {
+font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px}
+
+
+#all {
+width:756px;
+margin:0 auto 10px;}
+
+h1 { font-size: 18px; }
+h2 { font-size: 16px}
+
+p { line-height: 130%; margin-bottom: .7em}
+ul { margin-bottom: .7em}
+ul li { line-height: 15px}
+
+/* estilo do plugin font size 1.1 */
+
+.tam1 p, .tam1 li{ font-size: 70%}
+.tam2 p, .tam2 li{ font-size: 80%}
+.tam3 p, .tam3 li{ font-size: 90%}
+.tam4 p, .tam4 li{ font-size: 100%}
+.tam5 p, .tam5 li{ font-size: 110%}
+.tam6 p, .tam6 li{ font-size: 120%}
+.tam7 p, .tam7 li{ font-size: 130%}
+
+#font_size {
+height: 20px;
+margin-bottom: 15px}
+
+#font_size ul { float: right; }
+#font_size ul li { float: left;margin-right: 3px}
+
+#font_size a {
+width: 20px;
+height: 20px;
+text-align: center;
+display: inline-block; 
+font-size: 12px; 
+line-height: 20px; 
+background: #ccc;
+color: #4F4F4F}
+
+#font_size li .disabilitar {
+	color: #AFAFAF;
+	background-color: #DFDFDF
+}
+
+/*fim da configura��o do plugin*/
+
+
+/* @Header */
+#header { 
+position: relative;
+height: 100px;}
+
+
+.vcard { float: left; padding: 30px 0 0 20px}
+.vcard  h1 { font-size: 40px; font-style: italic}
+
+/* @Menu */
+#main-content {
+float: left;
+width: 100%;
+padding-bottom:15px}
+#content {
+width: 480px;
+padding: 10px;
+float: left;
+border: 1px solid #e1e1e1}
+
+#sidebar {
+float: right;
+width: 201px;
+padding: 10px;
+background-color: #e1e1e1}
+
+
+#footer {
+padding: 10px 0 30px; 
+clear: both;
+border-top: 1px solid #e1e1e1;
+text-align: right;}
+
+#font_size { text-align: right}
+
