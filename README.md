@@ -45,7 +45,7 @@ Insert the css file <small>[*]</small>
 <table>
 	<tbody><tr>
 		<th align="left">Key</th>
-		<th align="left" width="220">Default value</th>
+		<th align="left" width="240">Default value</th>
 		<th align="left">Description</th>
 	</tr>
 	<tr>
@@ -67,10 +67,10 @@ Insert the css file <small>[*]</small>
 		<td align="left" valign="top">controllers</td>
 		<td align="left" valign="top">
 			{<br>
-			&nbsp;&nbsp;&nbsp;append: true,<br>
-			&nbsp;&nbsp;&nbsp;appendTo: 'body',<br>
-			&nbsp;&nbsp;&nbsp;showResetButton: false,<br> 
-			&nbsp;&nbsp;&nbsp;template : ''<br> 
+			&nbsp;&nbsp;append: true,<br>
+			&nbsp;&nbsp;appendTo: 'body',<br>
+			&nbsp;&nbsp;showResetButton: false,<br> 
+			&nbsp;&nbsp;template : ''<br> 
 			}
 		</td>
 		<td align="left" valign="top">Assign <code>append: true</code> when you don't want to create a html template for font size button controllers. <br>
