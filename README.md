@@ -45,7 +45,8 @@ Insert the css file *
 
 | Key            | Default value           | Description   |
 | :------------- | :------------- | :------------ |
-| targetSection  | 'body'         | In which section of the application you want the font size to change |
+| targetSection  | "body"         | Set the section of the application where the font size changes have to be reflected. |
 | store          | false          | If you set as `true` the variation changed by the user will be stored. Even if the user refreshs the page the font size will keep the same. |
+| variations     | 7         |  The amount of variations the font size will change. Lets suppose  you've assigned `9`, then the default font size class will be `.rvfs-5`. It will increase until the `.rvfs-9` class and decrease until reaches `.rvfs-1` |
 
 
