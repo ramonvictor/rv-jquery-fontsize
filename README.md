@@ -34,11 +34,28 @@ $.rvFontsize({
 }); 
 ```
 
-Insert the css file <small>[*]</small>
+Insert the css file [*]
 ``` html
 <link rel="stylesheet" href="css/rvfs.css" />
 ```
-<small>[*] In fact, if I were you, instead of add a new css file, I would rather copy its content and paste it on my own css (`main.css`, `style.css` or whatever you call it).</small>
+[*] In fact, if I were you, instead of add a new css file, I would rather copy its content and paste it on my own css (`main.css`, `style.css` or whatever you call it).
+
+*Observation:*
+Within `rvfs.css` file you will find the bellow snippet of code.
+This is a key code for this plugin works perfectly, because instead of
+add a dinamic css by javascript (which would damage the project performance)
+I decided to create key classes inside the css file to control the visual of
+each font size variation. Feel free to adapt it your project needs.
+
+``` css
+.rvfs-1 p, .rvfs-1 li{ font-size: 70%}
+.rvfs-2 p, .rvfs-2 li{ font-size: 80%}
+.rvfs-3 p, .rvfs-3 li{ font-size: 90%}
+.rvfs-4 p, .rvfs-4 li{ font-size: 100%}
+.rvfs-5 p, .rvfs-5 li{ font-size: 110%}
+.rvfs-6 p, .rvfs-6 li{ font-size: 120%}
+.rvfs-7 p, .rvfs-7 li{ font-size: 130%}
+```
 
 ### Available options
 
@@ -73,17 +90,17 @@ Insert the css file <small>[*]</small>
 			&nbsp;&nbsp;template : ''<br> 
 			}
 		</td>
-		<td align="left" valign="top">Assign <code>append: false</code> when you want to create your own html template for font size button controllers.<br>
-		Remember that when <code>append</code> is <code>true</code> you might want to change where the default html template have to be appended, to accomplish that you can use <code>appendTo: '#my-element'</code>.<br><br>
+		<td align="left" valign="top">Assign <code>append: false</code> when you want to create your own html template for font size button controllers.<br><br>
+		Remember that when <code>append</code> is <code>true</code> (default value) you might want to change where the default html template have to be appended, to accomplish that you can use <code>appendTo: '#my-element'</code>.<br><br>
 		You can also give the user the possibility to "reset" the font size variation to its original size by assign <code>showResetButton: true</code>.
 		<br><br>
-		If you've chosen <code>append: false</code> you should also declare <code>template</code> option to define your controllers' html structure: 
+		If you've chosen <code>append: false</code> you should also declare <code>template</code> option to define your controllers' html structure, for example: 
 <pre><code>template: '&lt;div class="btn-group">' +
                         '&lt;a href="#" class="rvfs-decrease btn">A-&lt;/a>' +
                         '&lt;a href="#" class="rvfs-reset btn">A&lt;/a>' +
                         '&lt;a href="#" class="rvfs-increase btn">A+&lt;/a>' +
                  	 '&lt;/ul>';</code></pre>
-         	 Note: to use this option please do <strong>NOT</strong> forget to add these three key css classes: <code>rvfs-increase</code>, <code>rvfs-decrease</code> and <code>rvfs-reset</code>.
+         	 Note: to use this option please do <strong>NOT</strong> forget to add these three key css classes: <code>rvfs-increase</code>, <code>rvfs-decrease</code> and <code>rvfs-reset</code>. Because the plugin will try to find them to attach their event handlers.
 		</td>
 	</tr>
 	</tbody>
