@@ -43,8 +43,8 @@ Insert the css file *
 
 ### Available options
 
-| Key            | Default value     | Description   |
-| :------------- | :---------------- | :------------ |
+| Key            | Default value           | Description   |
+| :------------- | :---------------------- | :------------ |
 | targetSection | 'body' | In which section of the application you want the font size to change |
 | store | false | If you set as `true` the variation changed by the user will be stored. Even if the user refreshs the page the font size will keep the same. |
 
