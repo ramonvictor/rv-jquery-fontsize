@@ -73,11 +73,11 @@ Insert the css file <small>[*]</small>
 			&nbsp;&nbsp;template : ''<br> 
 			}
 		</td>
-		<td align="left" valign="top">Assign <code>append: true</code> when you don't want to create a html template for font size button controllers. <br>
+		<td align="left" valign="top">Assign <code>append: false</code> when you want to create your own html template for font size button controllers.<br>
 		Remember that when <code>append</code> is <code>true</code> you might want to change where the default html template have to be appended, to accomplish that you can use <code>appendTo: '#my-element'</code>.<br><br>
 		You can also give the user the possibility to "reset" the font size variation to its original size by assign <code>showResetButton: true</code>.
 		<br><br>
-		However, if your project needs a specific html structure, you can also create your own button controllers html template: 
+		If you've chosen <code>append: false</code> you should also declare <code>template</code> option to define your controllers' html structure: 
 <pre><code>template: '&lt;div class="btn-group">' +
                         '&lt;a href="#" class="rvfs-decrease btn">A-&lt;/a>' +
                         '&lt;a href="#" class="rvfs-reset btn">A&lt;/a>' +
