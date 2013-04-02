@@ -46,7 +46,7 @@ Insert the css file <small>[*]</small>
 <table>
 	<tbody><tr>
 		<th align="left">Key</th>
-		<th align="left" style="width: 180px">Default value</th>
+		<th align="left" width="180">Default value</th>
 		<th align="left">Description</th>
 	</tr>
 	<tr>
