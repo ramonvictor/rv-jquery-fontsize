@@ -43,7 +43,7 @@ Insert the css file <small>[*]</small>
 
 ### Available options
 
-| Key            | Default value           | Description   |
+| Key            | <span style="display:block; width: 150px; ">Default value</span>           | Description   |
 | :------------- | :------------- | :------------ |
 | targetSection  | "body"         | Set the section of the application where the font size changes have to be reflected. |
 | store          | false          | If you set as `true` the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same. |
