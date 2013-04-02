@@ -45,7 +45,7 @@ Within `rvfs.css` file you will find the bellow snippet of code.
 This is a key code for this plugin works perfectly, because instead of
 add a dinamic css by javascript (which would damage the project performance)
 I decided to create key classes inside the css file to control the visual of
-each font size variation. Feel free to adapt it your project needs.
+each font size variation. Feel free to adapt it for your project needs.
 
 ``` css
 .rvfs-1 p, .rvfs-1 li{ font-size: 70% }
@@ -78,7 +78,9 @@ each font size variation. Feel free to adapt it your project needs.
 	<tr>
 		<td align="left" valign="top">variations</td>
 		<td align="left" valign="top">7</td>
-		<td align="left" valign="top">The amount of variations the font size will change. Lets suppose  you've assigned <code>9</code>, then the default font size css class, for the <code>targetSection</code> element, will be <code>.rvfs-5</code>. It will increase until the <code>.rvfs-9</code> class and decrease until it reaches <code>.rvfs-1</code>.</td>
+		<td align="left" valign="top">The amount of variations the font size will change. Lets suppose  you've assigned <code>9</code>, then the default font size css class, for the <code>targetSection</code> element, will be <code>.rvfs-5</code>. It will increase until the <code>.rvfs-9</code> class and decrease until it reaches <code>.rvfs-1</code>. <br>
+		<strong>Note:</strong> every time you change this option you should also update the css  classes declarations accordingly.
+		</td>
 	</tr>
 	<tr>
 		<td align="left" valign="top">controllers</td>
