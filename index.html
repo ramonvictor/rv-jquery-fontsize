@@ -1,60 +1,91 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
-<head profile="http://gmpg.org/xfn/11">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Font Size Plugin 1.1</title>
-<style type="text/css" media="screen">
-<!--
-	@import url("css/style.css");
--->
-</style>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/cookie.js"></script>
-<script type="text/javascript" src="js/font_size.js"></script>
-<script type="text/javascript">
-$(document).ready(function() { 
-	$('#font_size').fontSize({
-		alvo: '#content',
-		setCookie: true,
-		opResetar: true,
-		tipoPaiLink: 'ul'
-	});	
-});
-</script>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-br"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="pt-br"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="pt-br"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Font Size Plugin 1.1</title>
+
+    <!-- meta -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- main style -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- modernizr -->
+    <script src="js/modernizr-2.5.3.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- GA -->
+    <script>
+        // var _gaq = _gaq || [];
+        // _gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+        // _gaq.push(['_setDomainName', 'exemple.com']);
+        // _gaq.push(['_setAllowLinker', true]);
+        // _gaq.push(['_trackPageview']);
+
+        // (function() {
+        // var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        // ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        // var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        // })();
+    </script>
 </head>
 <body>
+<p class="none"><a href="#main-content" tabindex="1">Pular a navegação e ir direto para o conteúdo</a></p>
 <div id="all"> 
-		<div id="header">
-			<div class="vcard">
+        <header id="header">
+            <div class="vcard">
               <h1 class="fn">Fonte Size Plugin 1.1 <a href="http://www.ramonvictor.com/demo/fontsize/fontsize1.1/font_size1.1.zip">[download]</a></h1>
             </div><!-- vcard -->
-		</div><!-- header -->
-		<div id="main-content">
-        	<div id="content" class="outro outro2">
+        </header><!-- header -->
+        <div id="main-content" role="main">
+            <div id="content" class="outro outro2">
              <!--<div id="font_size"><ul><li>tamanho da fonte:</li><li><a href="javascript:;" class="menos" title="Diminuir tamanho da letra">A-</a></li><li><a href="javascript:;" class="resetar" title="Tamanho padr&atilde;o">A</a></li><li><a href="javascript:;" class="mais" title="Aumentar tamanho da letra">A+</a></li></ul></div>-->  
-					<div id="font_size"></div>
+                    <div id="font_size"></div>
                 <div class="post">
                 <p>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget feugiat sed, vehicula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ligula leo. Fusce accumsan interdum elit. In sagittis, metus nec feugiat mollis, nibh enim interdum sem, non convallis nisl lorem vel tortor. Duis ultricies sem venenatis magna lacinia vitae facilisis magna semper. Maecenas id dui varius purus dapibus volutpat ut eu ligula. Phasellus enim ligula, molestie sed varius ut, varius at ante. Sed non ligula at mauris dapibus imperdiet. Pellentesque eget massa felis, adipiscing lacinia justo. Suspendisse potenti. Pellentesque a metus lorem. Donec dapibus sapien nec erat tincidunt dictum. Vivamus venenatis condimentum placerat. Mauris placerat fermentum ligula eu blandit. Nulla arcu lacus, tincidunt sed blandit tristique, ornare a nisl. Cras in enim felis. Aenean sit amet auctor nulla.</p>
                 <ul>
-                	<li>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget</li>
-                	<li>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget</li>
-                	<li>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget</li>
-                	<li>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget</li>                                                            
+                    <li>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget</li>
+                    <li>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget</li>
+                    <li>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget</li>
+                    <li>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget</li>                                                            
                 </ul>
-	<p>Maecenas mi augue, gravida at hendrerit eu, tincidunt at lectus. Nunc lectus urna, luctus et venenatis eu, iaculis vitae neque. Proin mollis consequat nibh non semper. Aliquam scelerisque est eu enim placerat at sodales massa adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget arcu imperdiet diam mattis consequat in eget velit. Proin laoreet vulputate cursus. Aliquam non diam lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis turpis est, malesuada non accumsan vel, mattis non ligula. Phasellus vehicula mauris id tortor posuere imperdiet. Morbi tristique ultricies ligula vitae luctus. Maecenas nec libero justo, nec vestibulum leo. Integer sit amet luctus quam. Proin pulvinar pellentesque nulla nec dictum. Donec gravida, enim pulvinar posuere aliquam, quam metus eleifend odio, quis sollicitudin dui lectus eu nisi. Donec sem sapien, convallis eget ultricies a, molestie vitae neque. Mauris in mauris magna, in gravida arcu. Fusce vitae mi sem. </p>
-    			</div>
+    <p>Maecenas mi augue, gravida at hendrerit eu, tincidunt at lectus. Nunc lectus urna, luctus et venenatis eu, iaculis vitae neque. Proin mollis consequat nibh non semper. Aliquam scelerisque est eu enim placerat at sodales massa adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget arcu imperdiet diam mattis consequat in eget velit. Proin laoreet vulputate cursus. Aliquam non diam lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis turpis est, malesuada non accumsan vel, mattis non ligula. Phasellus vehicula mauris id tortor posuere imperdiet. Morbi tristique ultricies ligula vitae luctus. Maecenas nec libero justo, nec vestibulum leo. Integer sit amet luctus quam. Proin pulvinar pellentesque nulla nec dictum. Donec gravida, enim pulvinar posuere aliquam, quam metus eleifend odio, quis sollicitudin dui lectus eu nisi. Donec sem sapien, convallis eget ultricies a, molestie vitae neque. Mauris in mauris magna, in gravida arcu. Fusce vitae mi sem. </p>
+                </div>
             </div>
             <div id="sidebar">
-            	<p>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget feugiat sed, vehicula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ligula leo. Fusce accumsan interdum elit.</p>
-            	<p>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget feugiat sed, vehicula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ligula leo. Fusce accumsan interdum elit.</p>
-            	<p>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget feugiat sed, vehicula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ligula leo. Fusce accumsan interdum elit.</p>                                
-            	
+                <p>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget feugiat sed, vehicula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ligula leo. Fusce accumsan interdum elit.</p>
+                <p>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget feugiat sed, vehicula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ligula leo. Fusce accumsan interdum elit.</p>
+                <p>Aliquam sed luctus turpis. Proin nisi ligula, elementum eget feugiat sed, vehicula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ligula leo. Fusce accumsan interdum elit.</p>
             </div>
-		</div><!-- main-content -->
-        <div id="footer">
-        	<p><a href="http://www.ramonvictor.com/plugin-jquery-font-size-1-1">Post original aqui</a></p>
-        	<p>Autor: <a href="http://www.ramonvictor.com/sobre">ramonvictor.com</a></p>
-        </div><!-- footer -->
+        </div><!-- main-content -->
+        <footer id="footer">
+            <p><a href="http://www.ramonvictor.com/plugin-jquery-font-size-1-1">Post original aqui</a></p>
+            <p>Autor: <a href="http://www.ramonvictor.com/sobre">ramonvictor.com</a></p>
+        </footer><!-- footer -->
 </div><!-- all -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/rv-jquery-fontsize-1.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+    $('#font_size').fontSize({
+        alvo: '#content',
+        setCookie: true,
+        opResetar: true,
+        tipoPaiLink: 'ul'
+    }); 
+});
+</script>
 </body>
 </html>
