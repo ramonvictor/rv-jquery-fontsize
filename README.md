@@ -40,7 +40,7 @@ Insert the css file [*]
 ```
 [*] In fact, if I were you, instead of add a new css file, I would rather copy its content and paste it on my own css (`main.css`, `style.css` or whatever you call it).
 
-*Observation:*
+##### CSS Observation:
 Within `rvfs.css` file you will find the bellow snippet of code.
 This is a key code for this plugin works perfectly, because instead of
 add a dinamic css by javascript (which would damage the project performance)
@@ -48,13 +48,13 @@ I decided to create key classes inside the css file to control the visual of
 each font size variation. Feel free to adapt it your project needs.
 
 ``` css
-.rvfs-1 p, .rvfs-1 li{ font-size: 70%}
-.rvfs-2 p, .rvfs-2 li{ font-size: 80%}
-.rvfs-3 p, .rvfs-3 li{ font-size: 90%}
-.rvfs-4 p, .rvfs-4 li{ font-size: 100%}
-.rvfs-5 p, .rvfs-5 li{ font-size: 110%}
-.rvfs-6 p, .rvfs-6 li{ font-size: 120%}
-.rvfs-7 p, .rvfs-7 li{ font-size: 130%}
+.rvfs-1 p, .rvfs-1 li{ font-size: 70% }
+.rvfs-2 p, .rvfs-2 li{ font-size: 80% }
+.rvfs-3 p, .rvfs-3 li{ font-size: 90% }
+.rvfs-4 p, .rvfs-4 li{ font-size: 100% }
+.rvfs-5 p, .rvfs-5 li{ font-size: 110% }
+.rvfs-6 p, .rvfs-6 li{ font-size: 120% }
+.rvfs-7 p, .rvfs-7 li{ font-size: 130% }
 ```
 
 ### Available options
