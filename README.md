@@ -35,11 +35,11 @@ $.rvFontsize({
 }); 
 ```
 
-Insert the css file *
+Insert the css file [*]
 ``` html
 <link rel="stylesheet" href="css/rvfs.css" />
 ```
-* In fact, if I were you, instead of add a new css file, I would rather copy its content and paste it on your own css.
+[*] In fact, if I were you, instead of add a new css file, I would rather copy its content and paste it on my own css (`main.css`, `style.css` or whatever you call it).
 
 ### Available options
 
