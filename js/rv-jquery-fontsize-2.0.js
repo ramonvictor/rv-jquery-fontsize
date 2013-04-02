@@ -1,6 +1,6 @@
 /*
  *  Project: RV Font Size jQuery Plugin
- *  Description: An easy and flexible way to give font size accessibility control to the web systems end users.
+ *  Description: An easy and flexible jquery plugin to give font size accessibility control.
  *  URL: https://github.com/ramonvictor/rv-jquery-fontsize/
  *  Author: Ramon Victor (https://github.com/ramonvictor/)
  *  License: Licensed under the MIT license:
@@ -14,7 +14,7 @@
     
     var defaults = {
         targetSection: 'body',
-        setCookie: false,
+        store: false,
         variations: 7,
         controllers: {
             append: false,
@@ -25,22 +25,45 @@
     };
 
     function Plugin(element, options) {
-        this.element = element;
-        this.options = $.extend({}, defaults, options);
+        var _self = this;
+        _self.element = element;
+        _self.options = $.extend({}, defaults, options);
 
-        this._defaults = defaults;
-        this._name = rvFontsize;
+        _self._defaults = defaults;
+        _self._name = rvFontsize;
 
-        this.init();
+        _self.init();
     }
 
     Plugin.prototype = {
 
-        init: function () {
+        init: function() {
 
-            this.defineElements();
-            this.getDefaultFontSize();
+            var _self = this,
+                fn = function(){
+                    _self.defineElements();
+                    _self.getDefaultFontSize();
+                };
 
+            if( _self.options.store ){
+                _self.cachedScript("js/store.min.js").done(function(script, textStatus) {
+                  fn();
+                });
+            } else {
+                fn();
+            }            
+
+        },
+
+        cachedScript : function(url, options) {
+ 
+          options = $.extend(options || {}, {
+            dataType: "script",
+            cache: true,
+            url: url
+          });
+         
+          return $.ajax(options);
         },
 
         bindControlerHandlers: function(){
@@ -58,7 +81,7 @@
                         if(n > 1){
                             _self.$target.removeClass('rvfs-' + n);
                             _self.$target.attr('data-rvfs', n-1);
-                            _self.storeCurrentSize();
+                            _self.options.store ? _self.storeCurrentSize() : '';
                             _self.fontsizeChanged();
                         } 
                     } else {
@@ -79,7 +102,7 @@
                         if(n < _self.options.variations){
                             _self.$target.removeClass('rvfs-' + n);
                             _self.$target.attr('data-rvfs', n+1);
-                            _self.storeCurrentSize();
+                            _self.options.store ? _self.storeCurrentSize() : '';
                             _self.fontsizeChanged();
                         }
                     } else{
@@ -98,7 +121,7 @@
                     _self.$target.removeClass('rvfs-' + n);
 
                     _self.$target.attr('data-rvfs', _self.defaultFontsize);
-                    _self.storeCurrentSize();
+                    _self.options.store ? _self.storeCurrentSize() : '';
                     _self.fontsizeChanged();
                 });
             }
@@ -147,8 +170,9 @@
 
         setDefaultFontSize: function( dfs ){
             var _self = this;
-            if( _self.options.setCookie && ($.cookie("rvFontsize") !== null) ){
-                _self.$target.attr("data-rvfs", $.cookie("rvFontsize") );
+            
+            if( _self.options.store && store.get('rvfs') ){
+                _self.$target.attr("data-rvfs", store.get('rvfs') );
             } else {
                 _self.$target.attr("data-rvfs", dfs );
             }
@@ -157,7 +181,7 @@
         },
 
         storeCurrentSize : function() {
-            $.cookie('fontSize', this.$target.attr("data-rvfs") );
+            store.set('rvfs', this.$target.attr("data-rvfs"));  
         },
 
         getCurrentVariation : function(){

@@ -10,7 +10,7 @@
     <title>RV Font Size Plugin 2.0</title>
 
     <!-- meta -->
-    <meta name="description" content="RV Font Size Plugin 2.0">
+    <meta name="description" content="RV Font Size Plugin : an easy and flexible jquery plugin to give font size accessibility control.">
     <meta name="author" content="Ramon Victor | https://github.com/ramonvictor">
     <meta name="viewport" content="width=device-width">
 
@@ -20,8 +20,6 @@
     <!-- Required RV Font Size Stylesheet -->
     <link rel="stylesheet" href="css/rvfs.css">
     
-    <!-- modernizr -->
-    <script src="js/modernizr-2.5.3.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -80,14 +78,13 @@
 </div><!-- all -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
-<script type="text/javascript" src="js/cookie.js"></script>
-<!-- Replace cookie plugin for this one: https://github.com/marcuswestin/store.js -->
+<!-- <script type="text/javascript" src="js/store.min.js"></script> -->
 <script type="text/javascript" src="js/rv-jquery-fontsize-2.0.js"></script>
 <script type="text/javascript">
 $(document).ready(function() { 
     $.rvFontsize({
         targetSection: '#content',
-        setCookie: false,
+        store: true,
         controllers: {
             append: true,
             appendTo: '#rvfs-controllers',
