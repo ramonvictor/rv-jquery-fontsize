@@ -57,17 +57,17 @@ Insert the css file <small>[*]</small>
 	<tr>
 		<td align="left">store</td>
 		<td align="left">false</td>
-		<td align="left">If you set as `true` the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same.</td>
+		<td align="left">If you set as <code>true</code> the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same.</td>
 	</tr>
 	<tr>
 		<td align="left">variations</td>
 		<td align="left">7</td>
-		<td align="left">The amount of variations the font size will change. Lets suppose  you've assigned `9`, then the default font size css class, for the `targetSection` element, will be `.rvfs-5`. It will increase until the `.rvfs-9` class and decrease until it reaches `.rvfs-1`.</td>
+		<td align="left">The amount of variations the font size will change. Lets suppose  you've assigned <code>9</code>, then the default font size css class, for the <code>targetSection</code> element, will be <code>.rvfs-5</code>. It will increase until the <code>.rvfs-9</code> class and decrease until it reaches <code>.rvfs-1</code>.</td>
 	</tr>
 	<tr>
 		<td align="left">controllers</td>
 		<td align="left">{<br> append: false,<br> appendTo: 'body',<br> showResetButton: false,<br> template : ''<br> }</td>
-		<td align="left">If you assign `append: true`...</td>
+		<td align="left">If you assign <code>append: true</code>...</td>
 	</tr>
 	</tbody>
 </table>
