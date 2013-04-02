@@ -43,12 +43,31 @@ Insert the css file <small>[*]</small>
 
 ### Available options
 
-| Key            | Default value  | Description   |
-| :------------- | :------------- | :------------ |
-| targetSection  | <span style="display:block; width: 180px; ">"body"</span> | Set the section of the application where the font size changes have to be reflected. |
-| store          | false          | If you set as `true` the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same. |
-| variations     | 7         |  The amount of variations the font size will change. Lets suppose  you've assigned `9`, then the default font size css class, for the `targetSection` element, will be `.rvfs-5`. It will increase until the `.rvfs-9` class and decrease until it reaches `.rvfs-1`. |
-| controllers     | {<br> append: false,<br> appendTo: 'body',<br> showResetButton: false,<br> template : ''<br> } |  If you assign `append: true`... |
-
-
-
+<table>
+	<tbody><tr>
+		<th align="left">Key</th>
+		<th align="left" style="width: 180px">Default value</th>
+		<th align="left">Description</th>
+	</tr>
+	<tr>
+		<td align="left">targetSection</td>
+		<td align="left">"body"</td>
+		<td align="left">Set the section of the application where the font size changes have to be reflected.</td>
+	</tr>
+	<tr>
+		<td align="left">store</td>
+		<td align="left">false</td>
+		<td align="left">If you set as `true` the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same.</td>
+	</tr>
+	<tr>
+		<td align="left">variations</td>
+		<td align="left">7</td>
+		<td align="left">The amount of variations the font size will change. Lets suppose  you've assigned `9`, then the default font size css class, for the `targetSection` element, will be `.rvfs-5`. It will increase until the `.rvfs-9` class and decrease until it reaches `.rvfs-1`.</td>
+	</tr>
+	<tr>
+		<td align="left">controllers</td>
+		<td align="left">{<br> append: false,<br> appendTo: 'body',<br> showResetButton: false,<br> template : ''<br> }</td>
+		<td align="left">If you assign `append: true`...</td>
+	</tr>
+	</tbody>
+</table>
