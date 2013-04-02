@@ -45,7 +45,7 @@ Insert the css file <small>[*]</small>
 <table>
 	<tbody><tr>
 		<th align="left">Key</th>
-		<th align="left" width="180">Default value</th>
+		<th align="left" width="220">Default value</th>
 		<th align="left">Description</th>
 	</tr>
 	<tr>
@@ -79,11 +79,11 @@ Insert the css file <small>[*]</small>
 		<br><br>
 		However, if your project needs a specific html structure, you can also create your own button controllers html template: 
 <pre><code>template: '&lt;div class="btn-group">' +
-                        '&lt;a href="javascript:;" class="rvfs-decrease btn" title="Decrease font size">A-&lt;/a>' +
-                        '&lt;a href="javascript:;" class="rvfs-reset btn" title="Default font size">A&lt;/a>' +
-                        '&lt;a href="javascript:;" class="rvfs-increase btn" title="Increase font size">A+&lt;/a>' +
+                        '&lt;a href="#" class="rvfs-decrease btn">A-&lt;/a>' +
+                        '&lt;a href="#" class="rvfs-reset btn">A&lt;/a>' +
+                        '&lt;a href="#" class="rvfs-increase btn">A+&lt;/a>' +
                  	 '&lt;/ul>';</code></pre>
-         	 Note: to use this option please do *NOT* forget to add these three key css classes: <code>rvfs-increase</code>, <code>rvfs-decrease</code> and <code>rvfs-reset</code>.
+         	 Note: to use this option please do <strong>NOT</strong> forget to add these three key css classes: <code>rvfs-increase</code>, <code>rvfs-decrease</code> and <code>rvfs-reset</code>.
 		</td>
 	</tr>
 	</tbody>
