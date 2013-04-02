@@ -1,11 +1,11 @@
 # RV jQuery Fontsize Plugin
 
 ### What is it?
-An easy and flexible jquery plugin to give font size accessibility control.
+An easy and flexible jquery plugin to give font size accessibility control. [See live demo](http://www.ramonvictor.com/demo/fontsize/fontsize2.0/).
 
-[See live demo](http://www.ramonvictor.com/demo/fontsize/fontsize2.0/).
-
-NOTE: The plugin is in beta version, so if you find any bug feel free to [report here](https://github.com/ramonvictor/rv-jquery-fontsize/issues).
+Notes: 
+* The plugin is in beta version, so if you find any bug feel free to [report here](https://github.com/ramonvictor/rv-jquery-fontsize/issues);
+* The project is been tested with jquery 1.9.1.
 
 ### Features
 * Create your own controllers html template (increase, decrease and default buttons);
