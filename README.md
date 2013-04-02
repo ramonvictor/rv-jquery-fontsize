@@ -23,7 +23,7 @@ First, import the rv fontsize js file:
 Then, call $.rvFontsize() with the options you desire:
 
 ``` js
-// example of $.rvFontsize() used in the demo page
+// example of $.rvFontsize() call used in the demo page
 $.rvFontsize({
     targetSection: '#content .post',
     store: true,
@@ -35,11 +35,11 @@ $.rvFontsize({
 }); 
 ```
 
-Insert the css file [*]
+Insert the css file <small>[*]</small>
 ``` html
 <link rel="stylesheet" href="css/rvfs.css" />
 ```
-[*] In fact, if I were you, instead of add a new css file, I would rather copy its content and paste it on my own css (`main.css`, `style.css` or whatever you call it).
+<small>[*] In fact, if I were you, instead of add a new css file, I would rather copy its content and paste it on my own css (`main.css`, `style.css` or whatever you call it).</small>
 
 ### Available options
 
@@ -48,5 +48,7 @@ Insert the css file [*]
 | targetSection  | "body"         | Set the section of the application where the font size changes have to be reflected. |
 | store          | false          | If you set as `true` the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same. |
 | variations     | 7         |  The amount of variations the font size will change. Lets suppose  you've assigned `9`, then the default font size css class, for the `targetSection` element, will be `.rvfs-5`. It will increase until the `.rvfs-9` class and decrease until it reaches `.rvfs-1`. |
+| controllers     | {<br> append: false,<br> appendTo: 'body',<br> showResetButton: false,<br> template : ''<br> } |  If you assign `append: true`... |
+
 
 
