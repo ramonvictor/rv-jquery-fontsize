@@ -116,8 +116,7 @@
 			nc = "tam"+padrao;
 			$(alvo).addClass(atual.replace(nAtual, nc));	
 			$(this).parent().parent().find('a').removeClass('disabilitar');
-			return $.verifyCookie(nc);
-						
+			return $.verifyCookie(nc);						
 		});
 		
 		

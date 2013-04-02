@@ -1,4 +1,4 @@
 rv-jquery-fontsize
 ==================
 
-jQuery font size accessibility plugin.
+[version 2.0 alpha] jQuery font size accessibility plugin.
