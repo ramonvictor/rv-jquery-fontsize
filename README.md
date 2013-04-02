@@ -3,14 +3,14 @@
 ### What is it?
 An easy and flexible jquery plugin to give font size accessibility control.
 
-[See live demo](http://ramonvictor.com/fontsize/fontsize2.0/).
+[See live demo](http://www.ramonvictor.com/demo/fontsize/fontsize2.0/).
 
 NOTE: The plugin is in beta version, so if you find any bug feel free to [report here](https://github.com/ramonvictor/rv-jquery-fontsize/issues).
 
 ### Features
-* Create your own controllers (increase, decrease and default buttons) html template;
-* Store the last font size variation set by the user. Thus, when the user comes back to your application/website he will be able to see his preferred font size;
-* Create your own font size style for each variation by editing the `fvfs-*` classes on `css/fvfs.css` file.
+* Create your own controllers html template (increase, decrease and default buttons);
+* Store the last font size variation setted by the user;
+* Create your own font size style for each variation by editing the `.fvfs-*` classes on `css/fvfs.css` file.
 
 
 ### How to use?
@@ -23,6 +23,7 @@ First, import the rv fontsize js file:
 Then, call $.rvFontsize() with the options you desire:
 
 ``` js
+// example of $.rvFontsize() used in the demo page
 $.rvFontsize({
     targetSection: '#content .post',
     store: true,
@@ -42,9 +43,9 @@ Insert the css file *
 
 ### Available options
 
-| Key           | Default value | Description  |
-| ------------- | ------------- | ------------ |
-| targetSection | body | In which section of the application you want the font size to change |
+| Key            | Default value     | Description   |
+| :------------- | :---------------- | :------------ |
+| targetSection | 'body' | In which section of the application you want the font size to change |
 | store | false | If you set as `true` the variation changed by the user will be stored. Even if the user refreshs the page the font size will keep the same. |
 
 
