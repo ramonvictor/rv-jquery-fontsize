@@ -43,9 +43,9 @@ Insert the css file <small>[*]</small>
 
 ### Available options
 
-| Key            | <span style="display:block; width: 150px; ">Default value</span>           | Description   |
+| Key            | Default value  | Description   |
 | :------------- | :------------- | :------------ |
-| targetSection  | "body"         | Set the section of the application where the font size changes have to be reflected. |
+| targetSection  | <span style="display:block; width: 180px; ">"body"</span> | Set the section of the application where the font size changes have to be reflected. |
 | store          | false          | If you set as `true` the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same. |
 | variations     | 7         |  The amount of variations the font size will change. Lets suppose  you've assigned `9`, then the default font size css class, for the `targetSection` element, will be `.rvfs-5`. It will increase until the `.rvfs-9` class and decrease until it reaches `.rvfs-1`. |
 | controllers     | {<br> append: false,<br> appendTo: 'body',<br> showResetButton: false,<br> template : ''<br> } |  If you assign `append: true`... |
