@@ -17,7 +17,7 @@
         store: false,
         variations: 7,
         controllers: {
-            append: false,
+            append: true,
             appendTo: 'body',
             showResetButton: false,
             template : ''
@@ -133,7 +133,7 @@
             _self.$target = $( _self.options.targetSection );
           
             if( _self.options.controllers.append !== false ){
-                var resetButton = _self.options.controllers.showResetButton ? '<li><a href="javascript:;" class="rvfs-reset" title="Tamanho padrão">A</a></li>' : '';
+                var resetButton = _self.options.controllers.showResetButton ? '<li><a href="javascript:;" class="rvfs-reset" title="Default font size">A</a></li>' : '';
                 var template = _self.options.controllers.template,
                     controllersHtml = '';
                 _self.$appendTo = $( _self.options.controllers.appendTo );

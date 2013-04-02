@@ -23,12 +23,11 @@ First, import the rv fontsize js file:
 Then, call $.rvFontsize() with the options you desire:
 
 ``` js
-// example of $.rvFontsize() call used in the demo page
+// example of $.rvFontsize()
 $.rvFontsize({
     targetSection: '#content .post',
     store: true,
     controllers: {
-        append: true,
         appendTo: '#rvfs-controllers',
         showResetButton: true
     }
@@ -50,24 +49,42 @@ Insert the css file <small>[*]</small>
 		<th align="left">Description</th>
 	</tr>
 	<tr>
-		<td align="left">targetSection</td>
-		<td align="left">"body"</td>
-		<td align="left">Set the section of the application where the font size changes have to be reflected.</td>
+		<td align="left" valign="top">targetSection</td>
+		<td align="left" valign="top">"body"</td>
+		<td align="left" valign="top">Set the section of the application where the font size changes have to be reflected.</td>
 	</tr>
 	<tr>
-		<td align="left">store</td>
-		<td align="left">false</td>
-		<td align="left">If you set as <code>true</code> the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same.</td>
+		<td align="left" valign="top">store</td>
+		<td align="left" valign="top">false</td>
+		<td align="left" valign="top">If you set as <code>true</code> the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same.</td>
 	</tr>
 	<tr>
-		<td align="left">variations</td>
-		<td align="left">7</td>
-		<td align="left">The amount of variations the font size will change. Lets suppose  you've assigned <code>9</code>, then the default font size css class, for the <code>targetSection</code> element, will be <code>.rvfs-5</code>. It will increase until the <code>.rvfs-9</code> class and decrease until it reaches <code>.rvfs-1</code>.</td>
+		<td align="left" valign="top">variations</td>
+		<td align="left" valign="top">7</td>
+		<td align="left" valign="top">The amount of variations the font size will change. Lets suppose  you've assigned <code>9</code>, then the default font size css class, for the <code>targetSection</code> element, will be <code>.rvfs-5</code>. It will increase until the <code>.rvfs-9</code> class and decrease until it reaches <code>.rvfs-1</code>.</td>
 	</tr>
 	<tr>
-		<td align="left">controllers</td>
-		<td align="left">{<br> append: false,<br> appendTo: 'body',<br> showResetButton: false,<br> template : ''<br> }</td>
-		<td align="left">If you assign <code>append: true</code>...</td>
+		<td align="left" valign="top">controllers</td>
+		<td align="left" valign="top">
+			{<br>
+			&nbsp;&nbsp;&nbsp;append: true,<br>
+			&nbsp;&nbsp;&nbsp;appendTo: 'body',<br>
+			&nbsp;&nbsp;&nbsp;showResetButton: false,<br> 
+			&nbsp;&nbsp;&nbsp;template : ''<br> 
+			}
+		</td>
+		<td align="left" valign="top">Assign <code>append: true</code> when you don't want to create a html template for font size button controllers. <br>
+		Remember that when <code>append</code> is <code>true</code> you might want to change where the default html template have to be appended, to accomplish that you can use <code>appendTo: '#my-element'</code>.<br><br>
+		You can also give the user the possibility to "reset" the font size variation to its original size by assign <code>showResetButton: true</code>.
+		<br><br>
+		However, if your project needs a specific html structure, you can also create your own button controllers html template: 
+<pre><code>template: '&lt;div class="btn-group">' +
+                        '&lt;a href="javascript:;" class="rvfs-decrease btn" title="Decrease font size">A-&lt;/a>' +
+                        '&lt;a href="javascript:;" class="rvfs-reset btn" title="Default font size">A&lt;/a>' +
+                        '&lt;a href="javascript:;" class="rvfs-increase btn" title="Increase font size">A+&lt;/a>' +
+                 	 '&lt;/ul>';</code></pre>
+         	 Note: to use this option please do *NOT* forget to add these three key css classes: <code>rvfs-increase</code>, <code>rvfs-decrease</code> and <code>rvfs-reset</code>.
+		</td>
 	</tr>
 	</tbody>
 </table>
