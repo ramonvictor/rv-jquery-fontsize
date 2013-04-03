@@ -42,10 +42,10 @@ Insert the css file [*]
 
 ##### CSS Observation:
 Within `rvfs.css` file you will find the bellow snippet of code.
-This is a key code for this plugin works perfectly, because instead of
-add a dinamic css by javascript (which would damage the project performance)
-I decided to create key classes inside the css file to control the visual of
-each font size variation. Feel free to adapt it to your project needs.
+This is mandatory because instead of add a dinamic css by javascript 
+(which would damage the project performance) I decided to create key classes 
+inside the css file to control the visual of each font size variation. 
+Feel free to adapt it to your project needs.
 
 ``` css
 .rvfs-1 p, .rvfs-1 li{ font-size: 70% }
