@@ -9,6 +9,7 @@
  */
 
 ;(function ($, window, document, undefined) {
+    "use strict";
 
     var rvFontsize = "rvFontsize";
     
@@ -45,8 +46,8 @@
                     _self.getDefaultFontSize();
                 };
 
-            if( _self.options.store ){
-                _self.cachedScript("js/store.min.js").done(function(script, textStatus) {
+            if( _self.options.store === true ){
+                _self.cachedScript("js/store.min.js").done(function(){
                   fn();
                 });
             } else {
@@ -78,11 +79,13 @@
                     var $el = $(this);
 
                     if(!$el.hasClass('disable')){
-                        var n = parseInt( _self.getCurrentVariation() );
+                        var n = _self.getCurrentVariation();
                         if(n > 1){
                             _self.$target.removeClass('rvfs-' + n);
                             _self.$target.attr('data-rvfs', n-1);
-                            _self.options.store ? _self.storeCurrentSize() : '';
+                            if ( _self.options.store === true){
+                                _self.storeCurrentSize();
+                            }
                             _self.fontsizeChanged();
                         } 
                     }
@@ -98,11 +101,14 @@
                     var $el = $(this);
 
                     if(!$el.hasClass('disable')){
-                        var n = parseInt( _self.getCurrentVariation() );
+                        var n = _self.getCurrentVariation();
                         if(n < _self.options.variations){
                             _self.$target.removeClass('rvfs-' + n);
                             _self.$target.attr('data-rvfs', n+1);
-                            _self.options.store ? _self.storeCurrentSize() : '';
+                            
+                            if ( _self.options.store === true){
+                                _self.storeCurrentSize();
+                            }
                             _self.fontsizeChanged();
                         }
                     } 
@@ -115,11 +121,13 @@
                 _self.$resetButton.on('click', function(e){
                     e.preventDefault();
 
-                    var n = parseInt( _self.getCurrentVariation() );
+                    var n = _self.getCurrentVariation();
                     _self.$target.removeClass('rvfs-' + n);
 
                     _self.$target.attr('data-rvfs', _self.defaultFontsize);
-                    _self.options.store ? _self.storeCurrentSize() : '';
+                    if ( _self.options.store === true){
+                        _self.storeCurrentSize();
+                    }
                     _self.fontsizeChanged();
                 });
             }
@@ -157,10 +165,10 @@
                 v = _self.options.variations;
             _self.defaultFontsize = 0;
 
-            if(v % 2 == 0){
+            if(v % 2 === 0){
                 _self.defaultFontsize = (v/2) + 1;
             } else {
-                _self.defaultFontsize = parseInt((v/2) + 1);
+                _self.defaultFontsize = parseInt((v/2) + 1, 10);
             }
 
             _self.setDefaultFontSize( _self.defaultFontsize );
@@ -169,7 +177,7 @@
         setDefaultFontSize: function( dfs ){
             var _self = this;
             
-            if( _self.options.store && store.get('rvfs') ){
+            if( _self.options.store === true && store.get('rvfs') ){
                 _self.$target.attr("data-rvfs", store.get('rvfs') );
             } else {
                 _self.$target.attr("data-rvfs", dfs );
@@ -183,12 +191,12 @@
         },
 
         getCurrentVariation : function(){
-            return this.$target.attr("data-rvfs");
+            return parseInt( this.$target.attr("data-rvfs"), 10 );
         },
 
         fontsizeChanged : function(){
-            var _self = this;
-                currentFs = parseInt( _self.$target.attr("data-rvfs") );
+            var _self = this,
+                currentFs = _self.getCurrentVariation();
             _self.$target.addClass( "rvfs-" +  currentFs);
 
             if(currentFs === _self.options.variations){
@@ -215,7 +223,7 @@
         });
     };
 
-    $[rvFontsize] = function(options) {
+    $[rvFontsize] = function() {
         var $window = $(window);
         return $window.rvFontsize.apply($window, Array.prototype.slice.call(arguments, 0));
     };
