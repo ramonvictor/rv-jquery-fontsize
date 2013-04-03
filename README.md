@@ -98,10 +98,10 @@ each font size variation. Feel free to adapt it for your project needs.
 		<br><br>
 		If you've chosen <code>append: false</code> you should also declare <code>template</code> option to define your controllers' html structure, for example: 
 <pre><code>template: '&lt;div class="btn-group">' +
-                        '&lt;a href="#" class="rvfs-decrease btn">A-&lt;/a>' +
-                        '&lt;a href="#" class="rvfs-reset btn">A&lt;/a>' +
-                        '&lt;a href="#" class="rvfs-increase btn">A+&lt;/a>' +
-                 	 '&lt;/ul>';</code></pre>
+                '&lt;a href="#" class="rvfs-decrease btn">A-&lt;/a>' +
+                '&lt;a href="#" class="rvfs-reset btn">A&lt;/a>' +
+                '&lt;a href="#" class="rvfs-increase btn">A+&lt;/a>' +
+         	 '&lt;/ul>';</code></pre>
          	 Note: to use this option please do <strong>NOT</strong> forget to add these three key css classes: <code>rvfs-increase</code>, <code>rvfs-decrease</code> and <code>rvfs-reset</code>. Because the plugin will try to find them to attach their event handlers.
 		</td>
 	</tr>

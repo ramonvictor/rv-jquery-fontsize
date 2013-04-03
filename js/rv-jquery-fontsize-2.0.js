@@ -74,6 +74,7 @@
             _self.$decreaseButton = $('.rvfs-decrease');
             if( _self.$decreaseButton.length > 0){
                 _self.$decreaseButton.on('click', function(e){
+                    e.preventDefault();
                     var $el = $(this);
 
                     if(!$el.hasClass('disable')){
@@ -84,8 +85,6 @@
                             _self.options.store ? _self.storeCurrentSize() : '';
                             _self.fontsizeChanged();
                         } 
-                    } else {
-                        e.preventDefault();
                     }
 
                 });
@@ -95,6 +94,7 @@
             _self.$increaseButton = $('.rvfs-increase');
             if( _self.$increaseButton.length > 0){
                 _self.$increaseButton.on('click', function(e) { 
+                    e.preventDefault();
                     var $el = $(this);
 
                     if(!$el.hasClass('disable')){
@@ -105,17 +105,15 @@
                             _self.options.store ? _self.storeCurrentSize() : '';
                             _self.fontsizeChanged();
                         }
-                    } else{
-                        e.preventDefault();
-                    }
-
+                    } 
                 });
             }
             
             // reset the font size to its default
             _self.$resetButton = $(".rvfs-reset");
             if( _self.$resetButton.length > 0){
-                _self.$resetButton.on('click', function(){
+                _self.$resetButton.on('click', function(e){
+                    e.preventDefault();
 
                     var n = parseInt( _self.getCurrentVariation() );
                     _self.$target.removeClass('rvfs-' + n);
@@ -133,7 +131,7 @@
             _self.$target = $( _self.options.targetSection );
           
             if( _self.options.controllers.append !== false ){
-                var resetButton = _self.options.controllers.showResetButton ? '<li><a href="javascript:;" class="rvfs-reset" title="Default font size">A</a></li>' : '';
+                var resetButton = _self.options.controllers.showResetButton ? '<a href="#" class="rvfs-reset btn" title="Default font size">A</a>' : '';
                 var template = _self.options.controllers.template,
                     controllersHtml = '';
                 _self.$appendTo = $( _self.options.controllers.appendTo );
@@ -141,11 +139,11 @@
                 if( $.trim(template).length > 0 ){
                      controllersHtml = template;
                 } else {
-                    controllersHtml = '<ul>' +
-                                            '<li><a href="javascript:;" class="rvfs-decrease" title="Decrease font size">A-</a></li>' +
+                    controllersHtml = '<div class="btn-group">' +
+                                            '<a href="#" class="rvfs-decrease btn" title="Decrease font size">A-</a></li>' +
                                             resetButton +
-                                            '<li><a href="javascript:;" class="rvfs-increase" title="Increase font size">A+</a></li>' +
-                                      '</ul>';
+                                            '<a href="#" class="rvfs-increase btn" title="Increase font size">A+</a></li>' +
+                                      '</div>';
                 }
 
                 _self.$appendTo.html( controllersHtml );
@@ -194,15 +192,15 @@
             _self.$target.addClass( "rvfs-" +  currentFs);
 
             if(currentFs === _self.options.variations){
-                _self.$increaseButton.addClass('disable');
+                _self.$increaseButton.addClass('disabled');
             } else {
-                _self.$increaseButton.removeClass('disable');
+                _self.$increaseButton.removeClass('disabled');
             }
 
             if(currentFs === 1){
-                _self.$decreaseButton.addClass('disable');
+                _self.$decreaseButton.addClass('disabled');
             } else {
-                _self.$decreaseButton.removeClass('disable');
+                _self.$decreaseButton.removeClass('disabled');
             }
         }
     };
