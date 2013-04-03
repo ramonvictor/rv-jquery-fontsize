@@ -73,7 +73,7 @@ Feel free to adapt it to fit your project needs.
 		<td align="left" valign="top">store</td>
 		<td align="left" valign="top">false</td>
 		<td align="left" valign="top">If set as <code>true</code> the browser localStorage will be used to store font size settings. Thus, even if the user refreshs the page the font size will keep the same.<br><br>
-		 When this feature is enabled it uses [store.js](https://github.com/marcuswestin/store.js) plugin. So, don't forget to add <strong>store.min.js</strong> file inside your <strong>/js</strong> folder.
+		 When this feature is enabled it uses <a href="https://github.com/marcuswestin/store.js">store.js</a> plugin. So, don't forget to add <strong>store.min.js</strong> file inside your <strong>/js</strong> folder.
 		</td>
 	</tr>
 	<tr>
