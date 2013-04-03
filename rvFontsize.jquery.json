@@ -1,17 +1,24 @@
 {
   "name": "rvFontsize",
-  "title": "RV Font Size",
+  "title": "RV Font Size jQuery plugin",
   "description": "An easy and flexible jquery plugin to give font size accessibility control.",
   "keywords": [
     "fontsize",
     "accessibility",
-    "usability"
+    "usability",
+    "jquery"
   ],
-  "version": "2.0",
+  "version": "0.2.0",
   "author": {
     "name": "Ramon Victor",
     "url": "https://github.com/ramonvictor"
   },
+  "maintainers": [
+    {
+      "name": "Ramon Victor",
+      "url": "https://github.com/ramonvictor"
+    }
+  ],
   "licenses": [
     {
       "type": "MIT",
