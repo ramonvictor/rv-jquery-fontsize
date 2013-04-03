@@ -17,7 +17,7 @@ Notes:
 
 First, import the rv fontsize js file:
 ``` html
-<script type="text/javascript" src="js/rv-jquery-fontsize-2.0.js"></script>
+<script type="text/javascript" src="js/rv-jquery-fontsize-2.0.min.js"></script>
 ```
 
 Then, call $.rvFontsize() with the options you desire:
@@ -107,3 +107,11 @@ each font size variation. Feel free to adapt it to your project needs.
 	</tr>
 	</tbody>
 </table>
+
+### Credits
+* [jQuery Boilerplate](http://jqueryboilerplate.com)
+* [store.js](https://github.com/marcuswestin/store.js)
+
+### License
+
+[MIT License](http://opensource.org/licenses/mit-license.php)
