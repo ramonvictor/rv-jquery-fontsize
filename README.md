@@ -1,6 +1,6 @@
-# RV jQuery Fontsize Plugin
+# RV Font Size jQuery Plugin
 
-### What is it?
+### About
 An easy and flexible jquery plugin to give font size accessibility control. [See live demo](http://www.ramonvictor.com/demo/fontsize/fontsize2.0/).
 
 Notes: 
@@ -9,7 +9,7 @@ Notes:
 
 ### Features
 * Create your own controllers html template (increase, decrease and default buttons);
-* Store the last font size variation setted by the user;
+* Font size settings can be remembered even after page reloads (via localStorage);
 * Create your own font size style for each variation by editing the `.fvfs-*` classes on `css/fvfs.css` file.
 
 
@@ -20,7 +20,7 @@ First, import the rv fontsize js file:
 <script type="text/javascript" src="js/rv-jquery-fontsize-2.0.min.js"></script>
 ```
 
-Then, call $.rvFontsize() with the options you desire:
+After that, call $.rvFontsize() with the desired options:
 
 ``` js
 // plugin call used in live demo page
@@ -38,20 +38,19 @@ Insert the css file [*]
 ``` html
 <link rel="stylesheet" href="css/rvfs.css" />
 ```
-[*] In fact, if I were you, instead of add a new css file, I would rather copy its content and paste it on my own css (`main.css`, `style.css` or whatever you call it).
+[*]  Instead of add a new css file, it would be recommended copy its content and paste it on your main css (`main.css`, `style.css` or whatever it's called).
 
-##### CSS Observation:
-Within `rvfs.css` file you will find the bellow snippet of code.
-This is mandatory because instead of add a dinamic css by javascript 
-(which would damage the project performance) I decided to create key classes 
-inside the css file to control the visual of each font size variation. 
-Feel free to adapt it to your project needs.
+##### CSS observation:
+Within `rvfs.css` file you will find the following snippet of code.
+This is mandatory because the RV Font Size plugin doesn't add dynamic
+css style in order to avoid damaging the project performance.
+Feel free to adapt it to fit your project needs.
 
 ``` css
 .rvfs-1 p, .rvfs-1 li{ font-size: 70% }
 .rvfs-2 p, .rvfs-2 li{ font-size: 80% }
 .rvfs-3 p, .rvfs-3 li{ font-size: 90% }
-.rvfs-4 p, .rvfs-4 li{ font-size: 100% }
+.rvfs-4 p, .rvfs-4 li{ font-size: 100% } // initial font size for 'variations' default value (7)
 .rvfs-5 p, .rvfs-5 li{ font-size: 110% }
 .rvfs-6 p, .rvfs-6 li{ font-size: 120% }
 .rvfs-7 p, .rvfs-7 li{ font-size: 130% }
@@ -68,18 +67,18 @@ Feel free to adapt it to your project needs.
 	<tr>
 		<td align="left" valign="top">targetSection</td>
 		<td align="left" valign="top">"body"</td>
-		<td align="left" valign="top">Set the section of the application where the font size changes have to be reflected.</td>
+		<td align="left" valign="top">Define in which application section the font size changes have to be reflected.</td>
 	</tr>
 	<tr>
 		<td align="left" valign="top">store</td>
 		<td align="left" valign="top">false</td>
-		<td align="left" valign="top">If you set as <code>true</code> the variation changed by the user will be stored. Thus, even if the user refreshs the page the font size will keep the same.</td>
+		<td align="left" valign="top">If set as <code>true</code> the browser localStorage will be used to store font size settings. Thus, even if the user refreshs the page the font size will keep the same.</td>
 	</tr>
 	<tr>
 		<td align="left" valign="top">variations</td>
 		<td align="left" valign="top">7</td>
-		<td align="left" valign="top">The amount of variations the font size will change. Lets suppose  you've assigned <code>9</code>, then the default font size css class, for the <code>targetSection</code> element, will be <code>.rvfs-5</code>. It will increase until the <code>.rvfs-9</code> class and decrease until it reaches <code>.rvfs-1</code>.<br><br>
-		<strong>Note:</strong> every time you change this option you should also update the css  classes declarations accordingly.
+		<td align="left" valign="top">The amount of variations the font size will change. If it's changed to <code>9</code>, then the default font size css class will be <code>.rvfs-5</code>. It will increase up to <code>.rvfs-9</code> class and decrease until it reaches <code>.rvfs-1</code>.<br><br>
+		<strong>Note:</strong> every time this option is changed the <code>.rvfs-*</code> classes have to be updated accordingly.
 		</td>
 	</tr>
 	<tr>
