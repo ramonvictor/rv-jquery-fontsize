@@ -1,5 +1,5 @@
 {
-  "name": "rvFontsize",
+  "name": "rvfontsize",
   "title": "RV Font Size jQuery Plugin",
   "description": "An easy and flexible jquery plugin to give font size accessibility control.",
   "keywords": [
@@ -28,7 +28,7 @@
   "bugs": "https://github.com/ramonvictor/rv-jquery-fontsize/issues",
   "homepage": "http://www.ramonvictor.com/demo/fontsize/fontsize2.0/",
   "docs": "https://github.com/ramonvictor/rv-jquery-fontsize#readme",
-  "download": "https://github.com/ramonvictor/rv-jquery-fontsize/archive/master.zip",
+  "download": "https://github.com/ramonavictor/rv-jquery-fontsize/archive/master.zip",
   "dependencies": {
     "jquery": "1.9.1"
   }
