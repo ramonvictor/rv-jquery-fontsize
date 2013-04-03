@@ -92,11 +92,11 @@ each font size variation. Feel free to adapt it to your project needs.
 			&nbsp;&nbsp;template : ''<br> 
 			}
 		</td>
-		<td align="left" valign="top">Assign <code>append: false</code> when you want to create your own html template for font size button controllers.<br><br>
+		<td align="left" valign="top">Assign <code>append: false</code> means that you will have to explicit declare your font size button controllers within your project html file. By doing this, all the following options (<code>appendTo</code>, <code>showResetButton</code> and <code>template</code>) are invalidated because the js won't append any html template any more, you will have to do this manually.<br><br>
 		Remember that when <code>append</code> is <code>true</code> (default value) you might want to change where the default html template have to be appended, to accomplish that you can use <code>appendTo: '#my-element'</code>.<br><br>
 		You can also give the user the possibility to "reset" the font size variation to its original size by assign <code>showResetButton: true</code>.
 		<br><br>
-		If you've chosen <code>append: false</code> you should also declare <code>template</code> option to define your controllers' html structure, for example: 
+		 You can also declare <code>template</code> option to define your controllers' html structure, for example: 
 <pre><code>template: '&lt;div class="btn-group">' +
                 '&lt;a href="#" class="rvfs-decrease btn">A-&lt;/a>' +
                 '&lt;a href="#" class="rvfs-reset btn">A&lt;/a>' +
