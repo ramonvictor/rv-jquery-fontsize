@@ -6,9 +6,10 @@
     "fontsize",
     "accessibility",
     "usability",
-    "jquery"
+    "jquery",
+    "typography"
   ],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Ramon Victor",
     "url": "https://github.com/ramonvictor"
