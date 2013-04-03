@@ -50,7 +50,7 @@ Feel free to adapt it to fit your project needs.
 .rvfs-1 p, .rvfs-1 li{ font-size: 70% }
 .rvfs-2 p, .rvfs-2 li{ font-size: 80% }
 .rvfs-3 p, .rvfs-3 li{ font-size: 90% }
-.rvfs-4 p, .rvfs-4 li{ font-size: 100% } // initial font size for 'variations' default value (7)
+.rvfs-4 p, .rvfs-4 li{ font-size: 100% } /* initial font size for 'variations' default value: 7 */
 .rvfs-5 p, .rvfs-5 li{ font-size: 110% }
 .rvfs-6 p, .rvfs-6 li{ font-size: 120% }
 .rvfs-7 p, .rvfs-7 li{ font-size: 130% }
@@ -72,7 +72,9 @@ Feel free to adapt it to fit your project needs.
 	<tr>
 		<td align="left" valign="top">store</td>
 		<td align="left" valign="top">false</td>
-		<td align="left" valign="top">If set as <code>true</code> the browser localStorage will be used to store font size settings. Thus, even if the user refreshs the page the font size will keep the same.</td>
+		<td align="left" valign="top">If set as <code>true</code> the browser localStorage will be used to store font size settings. Thus, even if the user refreshs the page the font size will keep the same.<br><br>
+		 When this feature is enabled it uses [store.js](https://github.com/marcuswestin/store.js) plugin. So, don't forget to add <strong>store.min.js</strong> file inside your <strong>/js</strong> folder.
+		</td>
 	</tr>
 	<tr>
 		<td align="left" valign="top">variations</td>
@@ -91,17 +93,17 @@ Feel free to adapt it to fit your project needs.
 			&nbsp;&nbsp;template : ''<br> 
 			}
 		</td>
-		<td align="left" valign="top">Assign <code>append: false</code> means that you will have to explicit declare your font size button controllers within your project html file. By doing this, all the following options (<code>appendTo</code>, <code>showResetButton</code> and <code>template</code>) are invalidated because the js won't append any html template any more, you will have to do this manually.<br><br>
-		Remember that when <code>append</code> is <code>true</code> (default value) you might want to change where the default html template have to be appended, to accomplish that you can use <code>appendTo: '#my-element'</code>.<br><br>
-		You can also give the user the possibility of "reset" the font size variation to its original size by assign <code>showResetButton: true</code>.
+		<td align="left" valign="top">Assign <code>append: false</code> means that your font size button controllers will have to be explicit declared within your project html file. By doing this, all the following options (<code>appendTo</code>, <code>showResetButton</code> and <code>template</code>) are invalidated because the js won't append any html template. In this case, it has to be done manually.<br><br>
+		If <code>append: true</code>, <code>appendTo</code> option can be used to specify in which element the font size controller html has to be appended.<br><br>
+		It's also possible to show a "reset" font size button by assigning <code>showResetButton: true</code>.
 		<br><br>
-		 Moreover, you can declare <code>template</code> option to define your controllers' html structure, for example: 
+		 Moreover, your own controllers html structure can be defined by using <code>template</code> option, for example: 
 <pre><code>template: '&lt;div class="btn-group">' +
                 '&lt;a href="#" class="rvfs-decrease btn">A-&lt;/a>' +
                 '&lt;a href="#" class="rvfs-reset btn">A&lt;/a>' +
                 '&lt;a href="#" class="rvfs-increase btn">A+&lt;/a>' +
          	 '&lt;/ul>';</code></pre>
-         	 Note: to use this option please do <strong>NOT</strong> forget to add these three key css classes: <code>rvfs-increase</code>, <code>rvfs-decrease</code> and <code>rvfs-reset</code>. Because the plugin will try to find them to attach their event handlers.
+         	 Note: to use this option please do <strong>NOT</strong> forget to add these three key css classes: <code>rvfs-increase</code>, <code>rvfs-decrease</code> and <code>rvfs-reset</code>. Because the plugin will try to find them to attach their respective event handlers.
 		</td>
 	</tr>
 	</tbody>
