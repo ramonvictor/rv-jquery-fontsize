@@ -11,22 +11,23 @@
 ;(function ($, window, document, undefined) {
     "use strict";
 
-    var rvFontsize = "rvFontsize";
-    
-    var defaults = {
-        targetSection: 'body',
-        store: false,
-        variations: 7,
-        controllers: {
-            append: true,
-            appendTo: 'body',
-            showResetButton: false,
-            template : ''
-        }
-    };
+    var rvFontsize = "rvFontsize",
+        defaults = {
+            targetSection: 'body',
+            store: false,
+            storeJsSrc: 'js/store.min.js',
+            variations: 7,
+            controllers: {
+                append: true,
+                appendTo: 'body',
+                showResetButton: false,
+                template : ''
+            }
+        };
 
     function Plugin(element, options) {
         var _self = this;
+
         _self.element = element;
         _self.options = $.extend({}, defaults, options);
 
@@ -47,7 +48,8 @@
                 };
 
             if( _self.options.store === true ){
-                _self.cachedScript("js/store.min.js").done(function(){
+                var jsPath = _self.options.storeJsSrc;
+                _self.cachedScript( jsPath ).done(function(){
                   fn();
                 });
             } else {

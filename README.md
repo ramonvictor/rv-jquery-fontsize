@@ -66,7 +66,7 @@ Feel free to adapt it to fit your project needs.
 	</tr>
 	<tr>
 		<td align="left" valign="top">targetSection</td>
-		<td align="left" valign="top">"body"</td>
+		<td align="left" valign="top">'body'</td>
 		<td align="left" valign="top">Define in which application section the font size changes have to be reflected.</td>
 	</tr>
 	<tr>
@@ -75,6 +75,11 @@ Feel free to adapt it to fit your project needs.
 		<td align="left" valign="top">If set as <code>true</code> the browser localStorage will be used to store font size settings. Thus, even if the user refreshs the page the font size will keep the same.<br><br>
 		 When this feature is enabled it uses <a href="https://github.com/marcuswestin/store.js">store.js</a> plugin. So, don't forget to add <strong>store.min.js</strong> file inside your <strong>/js</strong> folder.
 		</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">storeJsSrc</td>
+		<td align="left" valign="top">'js/store.min.js'</td>
+		<td align="left" valign="top">Change the default source of "store.min.js" file, if it's needed.</td>
 	</tr>
 	<tr>
 		<td align="left" valign="top">variations</td>
