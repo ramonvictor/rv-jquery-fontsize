@@ -71,16 +71,17 @@
 
         bindControlerHandlers: function(){
            
-            var _self = this;
+            var _self = this;               
             
             // decrease fn
             _self.$decreaseButton = $('.rvfs-decrease');
             if( _self.$decreaseButton.length > 0){
+                
                 _self.$decreaseButton.on('click', function(e){
-                    e.preventDefault();
+                    e.preventDefault();                    
                     var $el = $(this);
 
-                    if(!$el.hasClass('disable')){
+                    if(!$el.hasClass('disabled')){
                         var n = _self.getCurrentVariation();
                         if(n > 1){
                             _self.$target.removeClass('rvfs-' + n);
@@ -91,7 +92,6 @@
                             _self.fontsizeChanged();
                         } 
                     }
-
                 });
             }
             
@@ -102,7 +102,7 @@
                     e.preventDefault();
                     var $el = $(this);
 
-                    if(!$el.hasClass('disable')){
+                    if(!$el.hasClass('disabled')){
                         var n = _self.getCurrentVariation();
                         if(n < _self.options.variations){
                             _self.$target.removeClass('rvfs-' + n);
@@ -122,15 +122,18 @@
             if( _self.$resetButton.length > 0){
                 _self.$resetButton.on('click', function(e){
                     e.preventDefault();
+                    var $el = $(this);
 
-                    var n = _self.getCurrentVariation();
-                    _self.$target.removeClass('rvfs-' + n);
+                    if(!$el.hasClass('disabled')){
+                        var n = _self.getCurrentVariation();
+                        _self.$target.removeClass('rvfs-' + n);
 
-                    _self.$target.attr('data-rvfs', _self.defaultFontsize);
-                    if ( _self.options.store === true){
-                        _self.storeCurrentSize();
+                        _self.$target.attr('data-rvfs', _self.defaultFontsize);
+                        if ( _self.options.store === true){
+                            _self.storeCurrentSize();
+                        }
+                        _self.fontsizeChanged();
                     }
-                    _self.fontsizeChanged();
                 });
             }
 
@@ -173,16 +176,16 @@
                 _self.defaultFontsize = parseInt((v/2) + 1, 10);
             }
 
-            _self.setDefaultFontSize( _self.defaultFontsize );
+            _self.setDefaultFontSize();
         },
 
-        setDefaultFontSize: function( dfs ){
+        setDefaultFontSize: function(){
             var _self = this;
             
             if( _self.options.store === true && store.get('rvfs') ){
                 _self.$target.attr("data-rvfs", store.get('rvfs') );
             } else {
-                _self.$target.attr("data-rvfs", dfs );
+                _self.$target.attr("data-rvfs", _self.defaultFontsize );
             }
 
             _self.fontsizeChanged();
@@ -200,6 +203,12 @@
             var _self = this,
                 currentFs = _self.getCurrentVariation();
             _self.$target.addClass( "rvfs-" +  currentFs);
+
+            if(currentFs === _self.defaultFontsize){
+                _self.$resetButton.addClass('disabled');
+            } else{
+                _self.$resetButton.removeClass('disabled');
+            }
 
             if(currentFs === _self.options.variations){
                 _self.$increaseButton.addClass('disabled');
