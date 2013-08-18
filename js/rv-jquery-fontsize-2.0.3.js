@@ -15,7 +15,7 @@
         defaults = {
             targetSection: 'body',
             store: false,
-            storeJsSrc: 'js/store.min.js',
+            storeIsDefined: !(typeof store === "undefined"),
             variations: 7,
             controllers: {
                 append: true,
@@ -40,33 +40,21 @@
     Plugin.prototype = {
 
         init: function() {
-
             var _self = this,
                 fn = function(){
                     _self.defineElements();
                     _self.getDefaultFontSize();
                 };
 
-            if( _self.options.store === true ){
-                var jsPath = _self.options.storeJsSrc;
-                _self.cachedScript( jsPath ).done(function(){
-                  fn();
-                });
-            } else {
-                fn();
-            }            
+            fn();
 
+            if( _self.options.store === true && !(_self.options.storeIsDefined) ) {
+               _self.dependencyWarning();
+            }
         },
 
-        cachedScript : function(url, options) {
- 
-          options = $.extend(options || {}, {
-            dataType: "script",
-            cache: true,
-            url: url
-          });
-         
-          return $.ajax(options);
+        dependencyWarning : function(){
+            console.warn('When you difine "store: true", store script is required (https://github.com/ramonvictor/rv-jquery-fontsize/blob/master/js/store.min.js)'); 
         },
 
         bindControlerHandlers: function(){
@@ -182,8 +170,9 @@
         setDefaultFontSize: function(){
             var _self = this;
             
-            if( _self.options.store === true && store.get('rvfs') ){
-                _self.$target.attr("data-rvfs", store.get('rvfs') );
+            if( _self.options.store === true && _self.options.storeIsDefined ){
+                var currentFs = store.get('rvfs') || _self.defaultFontsize;
+                _self.$target.attr("data-rvfs", currentFs );
             } else {
                 _self.$target.attr("data-rvfs", _self.defaultFontsize );
             }
@@ -192,7 +181,12 @@
         },
 
         storeCurrentSize : function() {
-            store.set('rvfs', this.$target.attr("data-rvfs"));  
+            var _self = this;
+            if( _self.options.storeIsDefined ) {
+                store.set('rvfs', _self.$target.attr("data-rvfs"));                
+            } else {
+                _self.dependencyWarning();
+            }
         },
 
         getCurrentVariation : function(){

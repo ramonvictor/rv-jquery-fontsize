@@ -17,6 +17,7 @@ Notes:
 
 First, import the rv fontsize js file:
 ``` html
+<script type="text/javascript" src="js/store.min.js"></script><!-- store plugin required if "store : true"!  -->
 <script type="text/javascript" src="js/rv-jquery-fontsize-2.0.min.js"></script>
 ```
 
@@ -26,7 +27,7 @@ After that, call $.rvFontsize() with the desired options:
 // plugin call used in live demo page
 $.rvFontsize({
     targetSection: '#content .post',
-    store: true,
+    store: true, // store.min.js required!
     controllers: {
         appendTo: '#rvfs-controllers',
         showResetButton: true
@@ -73,13 +74,8 @@ Feel free to adapt it to fit your project needs.
 		<td align="left" valign="top">store</td>
 		<td align="left" valign="top">false</td>
 		<td align="left" valign="top">If set as <code>true</code> the browser localStorage will be used to store font size settings. Thus, even if the user refreshs the page the font size will keep the same.<br><br>
-		 When this feature is enabled it uses <a href="https://github.com/marcuswestin/store.js">store.js</a> plugin. So, don't forget to add <strong>store.min.js</strong> file inside your <strong>/js</strong> folder.
+		 When this feature is enabled it uses <a href="https://github.com/marcuswestin/store.js">store.js</a> plugin. So, don't forget to load the <strong>store.min.js</strong> script right before the <strong>rv-jquery-fontsize.js</strong>.
 		</td>
-	</tr>
-	<tr>
-		<td align="left" valign="top">storeJsSrc</td>
-		<td align="left" valign="top">'js/store.min.js'</td>
-		<td align="left" valign="top">Change the default source of "store.min.js" file, if it's needed.</td>
 	</tr>
 	<tr>
 		<td align="left" valign="top">variations</td>
