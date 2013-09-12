@@ -103,7 +103,7 @@ Feel free to adapt it to fit your project needs.
                 '&lt;a href="#" class="rvfs-decrease btn">A-&lt;/a>' +
                 '&lt;a href="#" class="rvfs-reset btn">A&lt;/a>' +
                 '&lt;a href="#" class="rvfs-increase btn">A+&lt;/a>' +
-         	 '&lt;/ul>';</code></pre>
+         	 '&lt;/div>'</code></pre>
          	 Note: to use this option please do <strong>NOT</strong> forget to add these three key css classes: <code>rvfs-increase</code>, <code>rvfs-decrease</code> and <code>rvfs-reset</code>. Because the plugin will try to find them to attach their respective event handlers.
 		</td>
 	</tr>
