@@ -1,0 +1,14 @@
+{
+  "name": "rv-jquery-fontsize",
+  "homepage": "https://github.com/ramonvictor/rv-jquery-fontsize",
+  "version": "0.2.3",
+  "_release": "0.2.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.3",
+    "commit": "c64b4b4127118169001a7284f702f349dc317ac6"
+  },
+  "_source": "git://github.com/ramonvictor/rv-jquery-fontsize.git",
+  "_target": "~0.2.3",
+  "_originalSource": "rv-jquery-fontsize"
+}
