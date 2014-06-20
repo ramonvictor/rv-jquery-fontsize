@@ -1,0 +1,27 @@
+{
+  "name": "rv-jquery-fontsize",
+  "version": "0.2.3",
+  "homepage": "https://github.com/brunobatista/rv-jquery-fontsize",
+  "description": "jQuery font size accessibility plugin.",
+  "main": [
+    "./css/base.css",
+    "./css/rvfs.css",
+    "./js/rv-jquery-fontsize-2.0.3.js"
+  ],
+  "keywords": [
+    "fontsize",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.1",
+    "store": ">= 2.1.6"
+  }
+}
