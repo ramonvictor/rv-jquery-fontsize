@@ -1,8 +1,8 @@
 {
   "name": "rv-jquery-fontsize",
   "version": "0.2.4",
-  "homepage": "https://github.com/brunobatista/rv-jquery-fontsize",
-  "description": "jQuery font size accessibility plugin.",
+  "homepage": "https://github.com/ramonvictor/rv-jquery-fontsize",
+  "description": "jQuery font size, increase and decrease, accessibility plugin.",
   "main": [
     "./css/base.css",
     "./css/rvfs.css",
