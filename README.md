@@ -18,7 +18,7 @@ Notes:
 First, import the rv fontsize js file:
 ``` html
 <script type="text/javascript" src="js/store.min.js"></script><!-- store plugin required if "store : true"!  -->
-<script type="text/javascript" src="js/rv-jquery-fontsize-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/rv-jquery-fontsize.min.js"></script>
 ```
 
 After that, call $.rvFontsize() with the desired options:

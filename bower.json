@@ -6,7 +6,7 @@
   "main": [
     "./css/base.css",
     "./css/rvfs.css",
-    "./js/rv-jquery-fontsize-2.0.3.js"
+    "./js/rv-jquery-fontsize.js"
   ],
   "keywords": [
     "fontsize",
